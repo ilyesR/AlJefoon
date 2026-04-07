@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 
 const servicesList = [
   { title: "Red Carpet Entrance", category: "Entrance", aspect: "aspect-[3/4]", img: "/images/red-carpet.png" },
@@ -26,17 +27,7 @@ const servicesList = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-bone-white text-matte-charcoal">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 mix-blend-difference text-bone-white p-6 md:p-12 flex justify-between items-center">
-        <Link href="/" className="font-prata text-xl tracking-widest uppercase hover:opacity-70 transition-opacity">
-          Al Jefoon
-        </Link>
-        <div className="hidden md:flex gap-12 text-sm tracking-widest uppercase font-light">
-          <Link href="/#collection" className="hover:opacity-50 transition-opacity">Collection</Link>
-          <Link href="/services" className="hover:opacity-50 transition-opacity">Services</Link>
-          <Link href="#contact" className="hover:opacity-50 transition-opacity">Contact</Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Header Section */}
       <section className="pt-48 pb-24 px-6 md:px-12 max-w-7xl mx-auto">

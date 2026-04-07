@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ChevronDown, Phone, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -11,17 +12,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-bone-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 mix-blend-difference text-bone-white p-6 md:p-12 flex justify-between items-center">
-        <Link href="/" className="font-prata text-xl tracking-widest uppercase hover:opacity-70 transition-opacity">
-          Al Jefoon
-        </Link>
-        <div className="hidden md:flex gap-12 text-sm tracking-widest uppercase font-light">
-          <Link href="/#collection" className="hover:opacity-50 transition-opacity">Collection</Link>
-          <Link href="/services" className="hover:opacity-50 transition-opacity">Services</Link>
-          <Link href="#contact" className="hover:opacity-50 transition-opacity">Contact</Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
@@ -87,7 +78,7 @@ export default function Home() {
           <span className="text-sm tracking-widest uppercase hidden md:block">Visual Catalog</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 px-6 md:px-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1 px-6 md:px-12">
           {/* Item 1 */}
           <div className="group relative aspect-[4/5] overflow-hidden bg-matte-charcoal">
             <Image
@@ -97,9 +88,9 @@ export default function Home() {
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/80 via-transparent to-transparent" />
-            <div className="absolute bottom-8 left-8 text-bone-white">
-              <h3 className="font-prata text-2xl mb-2">Cocktail Tables</h3>
-              <p className="text-sm font-light tracking-wider">Reception & Elegance</p>
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+              <h3 className="font-prata text-base md:text-2xl mb-1 md:mb-2">Cocktail Tables</h3>
+              <p className="text-xs md:text-sm font-light tracking-wider">Reception & Elegance</p>
             </div>
           </div>
 
@@ -112,9 +103,9 @@ export default function Home() {
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/80 via-transparent to-transparent" />
-            <div className="absolute bottom-8 left-8 text-bone-white">
-              <h3 className="font-prata text-2xl mb-2">Chiavari Chairs</h3>
-              <p className="text-sm font-light tracking-wider">Banquet & Wedding</p>
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+              <h3 className="font-prata text-base md:text-2xl mb-1 md:mb-2">Chiavari Chairs</h3>
+              <p className="text-xs md:text-sm font-light tracking-wider">Banquet & Wedding</p>
             </div>
           </div>
 
@@ -127,9 +118,9 @@ export default function Home() {
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/80 via-transparent to-transparent" />
-            <div className="absolute bottom-8 left-8 text-bone-white">
-              <h3 className="font-prata text-2xl mb-2">Buffet Setup</h3>
-              <p className="text-sm font-light tracking-wider">Professional Layout</p>
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+              <h3 className="font-prata text-base md:text-2xl mb-1 md:mb-2">Buffet Setup</h3>
+              <p className="text-xs md:text-sm font-light tracking-wider">Professional Layout</p>
             </div>
           </div>
 
@@ -142,9 +133,9 @@ export default function Home() {
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/80 via-transparent to-transparent" />
-            <div className="absolute bottom-8 left-8 text-bone-white">
-              <h3 className="font-prata text-2xl mb-2">Crockery & Cutlery</h3>
-              <p className="text-sm font-light tracking-wider">High Quality Details</p>
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+              <h3 className="font-prata text-base md:text-2xl mb-1 md:mb-2">Crockery & Cutlery</h3>
+              <p className="text-xs md:text-sm font-light tracking-wider">High Quality Details</p>
             </div>
           </div>
 
@@ -157,9 +148,9 @@ export default function Home() {
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/80 via-transparent to-transparent" />
-            <div className="absolute bottom-8 left-8 text-bone-white">
-              <h3 className="font-prata text-2xl mb-2">Banquet Setup</h3>
-              <p className="text-sm font-light tracking-wider">Overview</p>
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+              <h3 className="font-prata text-base md:text-2xl mb-1 md:mb-2">Banquet Setup</h3>
+              <p className="text-xs md:text-sm font-light tracking-wider">Overview</p>
             </div>
           </div>
 
@@ -172,9 +163,9 @@ export default function Home() {
               className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/80 via-transparent to-transparent" />
-            <div className="absolute bottom-8 left-8 text-bone-white">
-              <h3 className="font-prata text-2xl mb-2">Fabrication</h3>
-              <p className="text-sm font-light tracking-wider">Custom Work</p>
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+              <h3 className="font-prata text-base md:text-2xl mb-1 md:mb-2">Fabrication</h3>
+              <p className="text-xs md:text-sm font-light tracking-wider">Custom Work</p>
             </div>
           </div>
         </div>
