@@ -51,7 +51,7 @@ export default function ServicesPage() {
 
       {/* Aesthetic Masonry Gallery */}
       <section className="px-6 md:px-12 pb-32 max-w-[1400px] mx-auto">
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-2 md:columns-2 lg:columns-3 gap-3 md:gap-6 space-y-3 md:space-y-6">
           {servicesList.map((service, index) => (
             <motion.div 
               key={index}
@@ -69,11 +69,11 @@ export default function ServicesPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-matte-charcoal/90 via-matte-charcoal/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-700" />
               
-              <div className="absolute bottom-8 left-8 text-bone-white">
-                <p className="text-xs font-light tracking-[0.2em] uppercase mb-2 opacity-70">
+              <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-bone-white">
+                <p className="text-xs font-light tracking-[0.1em] md:tracking-[0.2em] uppercase mb-1 md:mb-2 opacity-70">
                   {service.category}
                 </p>
-                <h3 className="font-prata text-2xl md:text-3xl">
+                <h3 className="font-prata text-base md:text-2xl lg:text-3xl">
                   {service.title}
                 </h3>
               </div>
